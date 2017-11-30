@@ -6,8 +6,8 @@ var locationDatabase = [
   {name: 'Rumi Middle Eastern Grill', location: {lat: 41.9980032, lng: -87.6871963}, id: '576f2158498e96ab80e82569'},
   {name: 'I-Cafe Sukurs Place', location: {lat: 41.95430984150239, lng: -87.67477845545348}, id: '4c2113bc7e85c92802f1b921'},
   {name: 'La Pane Halal Pizza', location: {lat: 41.9281963, lng: -87.6907459}, id: '4c0e734cd64c0f476430285d'},
-  {name: 'Giodarnos', location: {lat: 41.9047732, lng: -87.6581608}, id: '508d8f72e4b01ceeb450b4e2'},
-  {name: 'Lahore Food and Grill', location: {lat: 41.8780215, lng: -87.6289296}, id: '4c948290f244b1f7cac7221d'}
+  {name: 'Chicago Halal Loop', location: {lat: 41.9047732, lng: -87.6581608}, id: '57da140d498e60e4772233c8'},
+  {name: 'Cafe 53', location: {lat: 41.8780215, lng: -87.6289296}, id: '4d94d5971231b60ca31283a1'}
 ];
 
 // Global variable callouts.
@@ -63,7 +63,8 @@ function Location(data) {
     url: foursquareURL,
     dataType: 'json'
   }).done(function(getData){
-    self.content = '<h3>' + self.name() + ' ' + '<div class="badge">' + getData.response.venue.rating + '/10' + '</div></h3>';
+    var rating = getData.response.venue.rating
+    self.content = '<h3>' + self.name() + ' ' + '<div class="badge">' + rating + '/10' + '</div></h3>';
     self.content += '<hr class="linestyle">';
     self.content += '<div><b>Location: </b> ' + getData.response.venue.location.address + '</div></ br>';
     self.content += '<div><b>Call: </b>' + getData.response.venue.contact.formattedPhone + '</div>';
