@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hala Joint in Chi City | Neighborhood Mapping</title>
+
+  <!-- Bootstrap Styles Sheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+<header>
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-brand toggleButton" type="button" data-toggle="collapse" data-target="#wrapper">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      </button>
+      <a class="navbar-brand" href="#">CHI-CITY HALAL JOINTS</a>
+      <form class="navbar-form navbar-left" role="search">
+        <input type="text" data-bind="value: filter, valueUpdate: 'afterkeydown'" class="form-control"
+        placeholder="Search Halal Joints...">
+      </form>
+
+      
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- Map Container -->
+<div class="container">
+  <!-- Side Navigation List-->
+  <div id="wrapper">
+    <div id="list-sidebar" class="dropdown-toggle">
+      <h4 class="list-group-item text-uppercase">Location List: </h4>
+      <ul id="listed-items" class="nav nav-sidebar list-group" data-bind="foreach: filterable">
+        <li class="list-group-item list-group-item-actions" data-bind="text: name, click: sideNavClick">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+    <div id="map">
+    </div>
+  </div>
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+    <!-- Knockout 3.4.2 -->
+  <script type='text/javascript' src='js/lib/knockout-3.4.2.js'></script>
+  
+  <!-- Ajax Script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <!--oAuth-signature -->
+  <script src="js/lib/oauth-signature.min.js"></script>
+  <!-- jQuery Script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- BootStrap Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <!-- My Mapping Javascript -->
+  <script src="js/map.js"></script>
+  
+  <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyB2mQ-towkXKT_qMZWeSxnCJ5Dw00kLKaQ&callback=initMap" onerror = "mapError()">
+    </script>
+  
+</body>
+</html>
