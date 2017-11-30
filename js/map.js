@@ -6,7 +6,7 @@ var locationDatabase = [
   {name: 'Rumi Middle Eastern Grill', location: {lat: 41.9980032, lng: -87.6871963}, id: '576f2158498e96ab80e82569'},
   {name: 'I-Cafe Sukurs Place', location: {lat: 41.95430984150239, lng: -87.67477845545348}, id: '4c2113bc7e85c92802f1b921'},
   {name: 'La Pane Halal Pizza', location: {lat: 41.9281963, lng: -87.6907459}, id: '4c0e734cd64c0f476430285d'},
-  {name: 'Chicago Halal Loop', location: {lat: 41.9047732, lng: -87.6581608}, id: '57da140d498e60e4772233c8'},
+  {name: 'Papacitos Mexican Grill', location: {lat: 41.9047732, lng: -87.6581608}, id: '4ab46a81f964a520297120e3'},
   {name: 'Cafe 53', location: {lat: 41.8780215, lng: -87.6289296}, id: '4d94d5971231b60ca31283a1'}
 ];
 
@@ -33,13 +33,12 @@ function initMap() {
   //Knockouts viewModel() to create filteration.
   ko.applyBindings(new ViewModel());
 
+} // <-- End of initMap()
+
   // Error alert if map doesn't function.
   function mapError() {
     alert('Map failed to render :( Please try again later or check console log in inspection window');
   }
-
-} // <-- End of initMap()
-
 
 /*////////////////////////////////////////////////
 * Getting the data from FourSqaure, using its API.
